@@ -1,0 +1,65 @@
+{
+  "name": "feed-db",
+  "version": "0.0.1",
+  "description": "Feed database read APIs.",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "xo",
+    "lint:fix": "xo --fix",
+    "test": "mocha test/index.js",
+    "test:cov": "nyc npm run test",
+    "test:loop": "while npm test --silent; do :; done"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "node-serialization": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^6.2.1",
+    "feed-db": "file:.",
+    "nyc": "^14.1.1",
+    "xo": "^0.25.3"
+  },
+  "keywords": [
+    "feed",
+    "feeds",
+    "rss",
+    "atom"
+  ],
+  "files": [
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=8.6.0"
+  },
+  "author": "dailyrandomphoto <dailyrandomphoto@gmail.com> (https://www.dailyrandomphoto.com/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dailyrandomphoto/feed-db.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dailyrandomphoto/feed-db/issues"
+  },
+  "homepage": "https://github.com/dailyrandomphoto/feed-db#readme",
+  "xo": {
+    "space": 2,
+    "rules": {
+      "promise/prefer-await-to-then": 0,
+      "capitalized-comments": 0
+    },
+    "overrides": [
+      {
+        "files": "test/*.js",
+        "envs": [
+          "node",
+          "mocha"
+        ]
+      }
+    ]
+  }
+}

@@ -4,12 +4,10 @@ const {resolve} = require('path');
 const chai = require('chai');
 chai.use(require('chai-as-promised'));
 const {expect} = chai;
-const lib = require('feed-db');
-const {Feeds, urlAlias} = require('feed-db');
+const {Feeds, urlAlias} = require('../lib');
 
 describe('feed-db', () => {
   it('should do something', () => {
-    expect(lib).to.be.an('object');
     expect(Feeds).to.be.a('function');
     expect(urlAlias).to.be.a('function');
   });

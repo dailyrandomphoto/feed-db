@@ -1,10 +1,10 @@
 'use strict';
 
-const {resolve} = require('path');
+const { resolve } = require('path');
 const chai = require('chai');
 chai.use(require('chai-as-promised'));
-const {expect} = chai;
-const {Feeds, urlAlias} = require('../lib');
+const { expect } = chai;
+const { Feeds, urlAlias } = require('../lib');
 
 describe('feed-db', () => {
   it('should do something', () => {
